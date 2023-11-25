@@ -1,0 +1,40 @@
+@media screen and (max-width: 600px) {
+    body {
+        background-color: #AFE1AF;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #AFE1AF;
+    font-family: Arial;
+    text-align: center;
+    overflow: hidden;
+    color: #023020;
+}
+
+#title {
+    font-weight: 800;
+    color: #023020;
+    font-size: 100px;
+}
+
+button {
+    padding: 0;
+    border: 4px solid #023020;
+    border-radius: 5px;
+}
+
+#buttons img {
+    width: 120px;
+    height: 150px;
+}
+
+.carousel-item img {
+    width: 320px;
+    height: 300px;
+}

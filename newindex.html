@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        <link href="styles.css" rel="stylesheet">
+        <title>Stray Kids Matching Game!</title>
+
+    </head>
+
+    <body>
+        <h3>Give Stray Kids new outfits!!</h3>
+        <br />
+
+        <!-- HEADS -->
+        <div id="UPcarousel" class="carousel slide" data-ride="carousel">
+            <div class="UPcarousel-inner"></div>
+            
+            <!-- buttons for previous and next -->
+            <a class="carousel-control-prev" href="#UPcarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#UPcarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- SHIRTS -->
+        <div id="SHIRTScarousel" class="carousel slide" data-ride="carousel">
+            <div class="SHIRTScarousel-inner"></div>
+                    
+            <!-- buttons for previous and next -->
+            <a class="carousel-control-prev" href="#SHIRTScarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#SHIRTScarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        
+
+        <script>
+            // UPPER media array
+            let UPmedia = ["image1.jpg", "image2.jpg", "image3.jpg"];
+            // iterating over the carousel of images and creating a div and matching src of each item to the image (list)
+            let UPcarouselInner = document.querySelector('.UPcarousel-inner');
+            for (let i = 0; i < UPmedia.length; i++) {
+                let carouselItem = document.createElement("div");
+                carouselItem.classList.add("carousel-item");
+                // if the index = 0, its the first one shown
+                if (i == 0) {
+                    carouselItem.classList.add("active");
+                }
+                let img = document.createElement("img");
+                img.src = UPmedia[i];
+                carouselItem.append(img);
+                UPcarouselInner.append(carouselItem);
+            }
+
+            // SHIRTS media array
+            let SHIRTSmedia = ["image1.jpg", "image2.jpg", "image3.jpg"];
+            // iterating over the carousel of images and creating a div and matching src of each item to the image (list)
+            let SHIRTScarouselInner = document.querySelector('.SHIRTScarousel-inner');
+            for (let i = 0; i < SHIRTSmedia.length; i++) {
+                let carouselItem = document.createElement("div");
+                carouselItem.classList.add("carousel-item");
+                // if the index = 0, its the first one shown
+                if (i == 0) {
+                    carouselItem.classList.add("active");
+                }
+                let img = document.createElement("img");
+                img.src = SHIRTSmedia[i];
+                carouselItem.append(img);
+                SHIRTScarouselInner.append(carouselItem);
+            }
+        </script>
+    </body>
+
+</html>
