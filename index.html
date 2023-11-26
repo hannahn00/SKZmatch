@@ -17,7 +17,7 @@
         <br /><br /><br /><br /><br /><br /><br /><br />
 
         <!-- HEADS -->
-        <div id="UPcarousel" class="carousel slide" data-ride="false"> 
+        <div id="UPcarousel" class="carousel slide" data-interval="2"> 
             <div class="UPcarousel-inner"></div>           
             <!-- buttons for previous and next -->
             <a class="carousel-control-prev" href="#UPcarousel" role="button" data-slide="prev">
@@ -31,7 +31,7 @@
         </div>
 
         <!-- SHIRTS -->
-        <div id="SHIRTScarousel" class="carousel slide" data-interval="false">
+        <div id="SHIRTScarousel" class="carousel slide" data-interval="2">
             <div class="SHIRTScarousel-inner"></div>
             <!-- buttons for previous and next -->
             <a class="carousel-control-prev" href="#SHIRTScarousel" role="button" data-slide="prev">
@@ -45,7 +45,7 @@
         </div>
 
         <!-- PANTS -->
-        <div id="PANTScarousel" class="carousel slide" data-interval="false">
+        <div id="PANTScarousel" class="carousel slide" data-interval="2">
             <div class="PANTScarousel-inner"></div>
             <!-- buttons for previous and next -->
             <a class="carousel-control-prev" href="#PANTScarousel" role="button" data-slide="prev">
@@ -59,7 +59,7 @@
         </div>
 
         <!-- SHOES -->
-        <div id="SHOEScarousel" class="carousel slide" data-ride="false">
+        <div id="SHOEScarousel" class="carousel slide" data-interval="2">
             <div class="SHOEScarousel-inner"></div>
             <!-- buttons for previous and next -->
             <a class="carousel-control-prev" href="#SHOEScarousel" role="button" data-slide="prev">
@@ -71,6 +71,31 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+
+
+        <button id="startCarousel">Start</button>         
+        <button id="stopCarousel">Stop</button>
+
+
+        <script>
+            // Handle button click to start the carousel
+            document.getElementById('startCarousel').addEventListener('click', function () {
+                $('#UPcarousel').carousel('cycle'); // Replace 'UPcarousel' with the actual ID of your carousel
+                $('#SHIRTScarousel').carousel('cycle'); // Replace 'SHIRTScarousel' with the actual ID of your carousel
+                $('#PANTScarousel').carousel('cycle'); // Replace 'PANTScarousel' with the actual ID of your carousel
+                $('#SHOEScarousel').carousel('cycle'); // Replace 'SHOEScarousel' with the actual ID of your carousel
+            });   
+
+            // Handle button click to start the carousel
+            document.getElementById('stopCarousel').addEventListener('click', function () {
+                $('#UPcarousel').carousel('pause'); // Replace 'UPcarousel' with the actual ID of your carousel
+                $('#SHIRTScarousel').carousel('pause'); // Replace 'SHIRTScarousel' with the actual ID of your carousel
+                $('#PANTScarousel').carousel('pause'); // Replace 'PANTScarousel' with the actual ID of your carousel
+                $('#SHOEScarousel').carousel('pause'); // Replace 'SHOEScarousel' with the actual ID of your carousel
+            });           
+        
+        </script>
+    
 
     </body>
 
