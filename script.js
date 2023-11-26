@@ -23,5 +23,17 @@ document.addEventListener("DOMContentLoaded", function() {
     let SHIRTSmedia = ["image1.jpg", "image2.jpg", "image3.jpg"];
     let SHIRTScarouselInner = document.querySelector('.SHIRTScarousel-inner');
     createCarousel(SHIRTSmedia, SHIRTScarouselInner);
+    
+    // PANTS media array
+    let PANTSmedia = ["image1.jpg", "image2.jpg", "image3.jpg"];
+    let PANTScarouselInner = document.querySelector('.PANTScarousel-inner');
+    createCarousel(PANTSmedia, PANTScarouselInner);
+    
+    // SHOES media array
+    let SHOESmedia = ["image1.jpg", "image2.jpg", "image3.jpg"];
+    let SHOEScarouselInner = document.querySelector('.SHOEScarousel-inner');
+    createCarousel(SHOESmedia, SHOEScarouselInner);
+    
+    
 
 });

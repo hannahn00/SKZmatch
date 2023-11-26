@@ -1,6 +1,7 @@
 @media screen and (max-width: 600px) {
     body {
-        background-color: #AFE1AF;
+        background-image: url("phonedressingroom.jpg");
+        background-size: cover;
     }
 }
 
@@ -10,21 +11,27 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #AFE1AF;
     font-family: Arial;
     text-align: center;
     overflow: hidden;
     color: #023020;
+    background-image: url("webdressingroom.jpg");
+    background-size: cover; /* This property ensures that the image covers the entire background */
 }
 
-#title {
-    font-weight: 800;
-    color: #023020;
-    font-size: 100px;
+h3 {
+    font-weight: bold;
+    color: #3f3f3f;
+    font-size: 30px;
+    font-family: "Days One", sans-serif;
+    position: absolute;
+    top: 60px; /* Adjust this value to position the h3 element */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 button {
-    padding: 0;
+    padding: 0px;
     border: 4px solid #023020;
     border-radius: 5px;
 }
@@ -34,7 +41,39 @@ button {
     height: 150px;
 }
 
-.carousel-item img {
-    width: 320px;
-    height: 300px;
+#UPcarousel .carousel-item img {
+    width: 150px;
+    height: 100px;
 }
+
+#SHIRTScarousel .carousel-item img {
+    width: 150px; 
+    height: 150px;
+}
+
+#PANTScarousel .carousel-item img {
+    width: 150px;
+    height: 180px;
+}
+
+#SHOEScarousel .carousel-item img {
+    width: 150px; 
+    height: 50px;
+}
+
+.carousel-control-prev {
+    margin-left: -100px;
+}
+
+.carousel-control-next {
+    margin-right: -100px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23%414141' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); 
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23%414141' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+  }
+  
