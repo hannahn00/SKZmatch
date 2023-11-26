@@ -17,7 +17,7 @@
         <br />
 
         <!-- HEADS -->
-        <div id="UPcarousel" class="carousel slide" data-ride="carousel">
+        <div id="UPcarousel" class="carousel slide">
             <div class="UPcarousel-inner"></div>
             
             <!-- buttons for previous and next -->
@@ -32,7 +32,7 @@
         </div>
 
         <!-- SHIRTS -->
-        <div id="SHIRTScarousel" class="carousel slide" data-ride="carousel">
+        <div id="SHIRTScarousel" class="carousel slide">
             <div class="SHIRTScarousel-inner"></div>
                     
             <!-- buttons for previous and next -->
@@ -48,39 +48,30 @@
         
 
         <script>
-            // UPPER media array
-            let UPmedia = ["image1.jpg", "image2.jpg", "image3.jpg"];
-            // iterating over the carousel of images and creating a div and matching src of each item to the image (list)
-            let UPcarouselInner = document.querySelector('.UPcarousel-inner');
-            for (let i = 0; i < UPmedia.length; i++) {
-                let carouselItem = document.createElement("div");
-                carouselItem.classList.add("carousel-item");
-                // if the index = 0, its the first one shown
-                if (i == 0) {
+            function createCarousel(media, carouselInner) {
+                media.forEach((item, index) => {
+                    let carouselItem = document.createElement("div");
+                    carouselItem.classList.add("carousel-item");
+                    if (index == 0) {
                     carouselItem.classList.add("active");
-                }
-                let img = document.createElement("img");
-                img.src = UPmedia[i];
-                carouselItem.append(img);
-                UPcarouselInner.append(carouselItem);
+                    }
+                    let img = document.createElement("img");
+                    img.src = item;
+                    carouselItem.append(img);
+                    carouselInner.append(carouselItem);
+                });
             }
 
+            // UPPER media array
+            let UPmedia = ["image1.jpg", "image2.jpg", "image3.jpg"];
+            let UPcarouselInner = document.querySelector('.UPcarousel-inner');
+            createCarousel(UPmedia, UPcarouselInner);
+        
             // SHIRTS media array
             let SHIRTSmedia = ["image1.jpg", "image2.jpg", "image3.jpg"];
-            // iterating over the carousel of images and creating a div and matching src of each item to the image (list)
             let SHIRTScarouselInner = document.querySelector('.SHIRTScarousel-inner');
-            for (let i = 0; i < SHIRTSmedia.length; i++) {
-                let carouselItem = document.createElement("div");
-                carouselItem.classList.add("carousel-item");
-                // if the index = 0, its the first one shown
-                if (i == 0) {
-                    carouselItem.classList.add("active");
-                }
-                let img = document.createElement("img");
-                img.src = SHIRTSmedia[i];
-                carouselItem.append(img);
-                SHIRTScarouselInner.append(carouselItem);
-            }
+            createCarousel(SHIRTSmedia, SHIRTScarouselInner);
+
         </script>
     </body>
 
