@@ -1,8 +1,37 @@
+
 @media screen and (max-width: 600px) {
     body {
         background-image: url("phonedressingroom.jpg");
         background-size: cover;
     }
+}
+#startCarousel {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #218838;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#stopCarousel {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    right: 100px; /* Adjust the right position as needed */
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #218838;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#startCarousel:hover, #stopCarousel:hover {
+    background-color: #218838;
 }
 
 body {
@@ -16,7 +45,20 @@ body {
     overflow: hidden;
     color: #023020;
     background-image: url("webdressingroom.jpg");
-    background-size: cover; /* This property ensures that the image covers the entire background */
+    background-size: cover;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure the overlay is above the carousel (which has z-index: 1 by default) */
+}
+
+.overlay-image img {
+    width: 600px; /* Set the width of the overlay image */
+    height: 800px; /* Set the height of the overlay image */
 }
 
 h3 {
@@ -25,7 +67,7 @@ h3 {
     font-size: 30px;
     font-family: "Days One", sans-serif;
     position: absolute;
-    top: 60px; /* Adjust this value to position the h3 element */
+    top: 60px; 
     left: 50%;
     transform: translateX(-50%);
 }
@@ -39,6 +81,16 @@ button {
 #buttons img {
     width: 120px;
     height: 150px;
+}
+
+.carousel-inner {
+    width: 150px; 
+    overflow: hidden;
+    margin: auto; 
+}
+
+.carousel-inner .carousel-item {
+    width: 100%; 
 }
 
 #UPcarousel .carousel-item img {
@@ -76,4 +128,3 @@ button {
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23%414141' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
   }
-  
